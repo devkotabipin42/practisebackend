@@ -13,7 +13,7 @@ export async function getFeed(){
 
 export async function createPost(imageFile,caption){
   const formData = new FormData()
-  formData.append('caption',imageFile)
+  formData.append('image',imageFile)
   formData.append('caption',caption)
 
   const response = await api.post('/api/posts',formData)

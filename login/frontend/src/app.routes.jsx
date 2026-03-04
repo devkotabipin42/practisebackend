@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     element:<Register/>
   },
   {
-  path:'/feed',
+  path:'/',
   element:<Feed/>
   },
   {

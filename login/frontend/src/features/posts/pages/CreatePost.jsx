@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { usePost } from '../hook/usePost'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const CreatePost = () => {
 
@@ -24,7 +24,7 @@ const CreatePost = () => {
 
   return (
     <div className='h-screen flex justify-center items-center'>
-    <div className="w-full h-[500px] max-w-sm mx-auto flex flex-col justify-center items-center bg-orange-900 border  rounded-xl shadow-sm ">
+    <div className="w-full h-[500px] max-w-sm mx-auto flex flex-col justify-center items-center bg-orange-900 border  rounded-xl shadow-sm  relative">
       
       {/* Header */}
       <div className="px-4 py-3 border-b ">
@@ -32,6 +32,7 @@ const CreatePost = () => {
           Create Post
         </h2>
       </div>
+      <div className='absolute top-0 left-0 p-2 bg-emerald-500 rounded-3xl px-3 m-2 active:scale-95 '><Link to='/feed'>Back</Link></div>
 
       {/* Form */}
       <form 
@@ -58,6 +59,7 @@ const CreatePost = () => {
           <input
             ref={postImageinputFieldRef}
             type="file"
+            name='postImage'
             accept="image/*"
             className="w-full text-black text-sm 
                        file:mr-3 file:rounded-lg file:border-0
@@ -82,7 +84,7 @@ const CreatePost = () => {
 
         {/* Post Button */}
         <button
-          type="button"
+          type="submit"
           className="w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-semibold active:scale-95 transition"
         >
           Post

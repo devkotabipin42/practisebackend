@@ -5,7 +5,7 @@ const Nav = () => {
 
   const navigate = useNavigate()
   return (
-    <div className="sticky top-0 z-50 w-full max-w-sm bg-gray-700 border-b border-gray-200">
+    <div className="sticky top-0 z-50 w-full max-w-sm bg-black ">
       <div className="h-12 px-4 flex items-center justify-between">
         <div className="w-6" /> {/* left spacing */}
 

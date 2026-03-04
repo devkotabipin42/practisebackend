@@ -3,7 +3,7 @@ import { FaHeart, FaRegComment, FaPaperPlane } from "react-icons/fa";
 
 const Post = ({user,post, handleLike, handleunLike}) => {
   return (
-   <div className="w-full max-w-sm bg-gray-700 text-white">
+   <div className="w-full max-w-sm bg-black text-white">
 
         {/* Header */}
         <div className="flex items-center p-4">
@@ -12,7 +12,7 @@ const Post = ({user,post, handleLike, handleunLike}) => {
             alt="profile"
             className="w-9 h-9 rounded-full object-cover"
           />
-          <span className="ml-3 font-semibold text-gray-800 text-sm">
+          <span className="ml-3 font-semibold text-shadow-white text-sm">
             {user.username}
           </span>
         </div>
@@ -34,12 +34,11 @@ const Post = ({user,post, handleLike, handleunLike}) => {
 
         {/* Caption */}
         <div className="px-4 pb-4">
-          <p className="text-sm text-gray-800">
+          <p className="text-sm text-shadow-white">
             <span className="font-semibold mr-2">{user.username}</span>
             {post.caption}
           </p>
         </div>
-
       </div>
   )
 }

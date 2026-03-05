@@ -14,7 +14,7 @@ const Register = () => {
   const hanldeSubmit = async(e) => {
     e.preventDefault();
     await handleRegister(username,email,password)
-    Navigate('/feed')
+    Navigate('/')
   };
   if (loading) {
     return (

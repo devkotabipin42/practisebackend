@@ -29,19 +29,9 @@ export const useAuth = () => {
     setLoading(false)
   }
 
-  const handleGetMe = async () => {
-    try{
-      setLoading(true)
-      const response = await getMe()
-      setUser(response.user)
-    }catch(err){
-      console.log(err)
-    }finally{
-      setLoading(false)
-    }
-  }
+  
   return {
-    user, handleLogin, handleRegister, loading,handleLogout,handleGetMe
+    user, handleLogin, handleRegister, loading,handleLogout
   }
 
 }

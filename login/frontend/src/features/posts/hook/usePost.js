@@ -20,6 +20,11 @@ export const usePost = ()=>{
     setLoading(false)
   }
 
+  const handleGetMe = async ()=>{
+    setLoading(true)
+    const data = await getMeProfile()
+    setFeed
+  }
   
   return{loading,feed,post,handleGetFeed,handleCreatePost}
 }

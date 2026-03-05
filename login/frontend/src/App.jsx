@@ -5,7 +5,7 @@ import { AuthContext, AuthProvider } from "./features/auth/Auth.contexts";
 import { PostContextProvider } from "./features/posts/post.context";
 const App = () => {
   return (
-    <div className="bg-amber-700 h-screen w-screen text-white">
+    <div className="bg-black h-screen w-screen text-white">
       <AuthProvider>
 		<PostContextProvider>
         <RouterProvider router={router} />

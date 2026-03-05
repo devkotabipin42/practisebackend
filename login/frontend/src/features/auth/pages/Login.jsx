@@ -15,7 +15,7 @@ const Login = () => {
 
 	await handleLogin(username,password)
 
-	navigate('/feed')
+	navigate('/')
 	
   };
 

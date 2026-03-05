@@ -32,7 +32,7 @@ const CreatePost = () => {
           Create Post
         </h2>
       </div>
-      <div className='absolute top-0 left-0 p-2 bg-emerald-500 rounded-3xl px-3 m-2 active:scale-95 '><Link to='/feed'>Back</Link></div>
+      <div className='absolute top-0 left-0 p-2 bg-emerald-500 rounded-3xl px-3 m-2 active:scale-95 '><Link to='/'>Back</Link></div>
 
       {/* Form */}
       <form 

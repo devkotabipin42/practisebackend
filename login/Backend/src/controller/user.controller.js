@@ -1,4 +1,5 @@
 const followModel=require('../model/follow.model')
+const postModel = require('../model/post.model')
 const userModel = require('../model/user.model')
 
 async function followUserCollection(req,res){
@@ -62,5 +63,31 @@ async function unfollowUserController(req,res){
   
 }
 
+async function getMeProfile(req,res){
+  const userId = req.user.id
 
-module.exports={followUserCollection,unfollowUserController}
+  const user = await userModel.findById(userId)
+
+  if(!user){
+    return res.status(404).json({
+      message:"user not found"
+    })
+  }
+  const posts = await postModel.find({user:userId}).select('imgUrl').sort({createdAt:-1})
+
+  return res.status(200).json({
+      user: {
+        username: user.username,
+        email: user.email,
+        bio: user.bio,
+        profileImage: user.profileImage,
+        followersCount: user.followers?.length || 0,
+        followingCount: user.following?.length || 0,
+        postsCount: posts.length,
+      },
+      posts, // [{ _id, imgUrl }]
+    })
+}
+
+
+module.exports={followUserCollection,unfollowUserController,getMeProfile}

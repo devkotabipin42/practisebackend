@@ -9,7 +9,7 @@ const Nav = () => {
       <div className="h-12 px-4 flex items-center justify-between">
         <div className="w-6" /> {/* left spacing */}
 
-        <h1 className="text-lg font-semibold tracking-tight">Instagram</h1>
+        <button onClick={()=>{navigate('/logout')}} className="text-lg font-semibold tracking-tight cursor-pointer">Instagram</button>
 
         <button
           className="text-2xl active:scale-95 transition"

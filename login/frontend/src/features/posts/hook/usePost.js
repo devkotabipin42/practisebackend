@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { createPost, getFeed } from "../services/post.api";
+import { createPost, getFeed,getMeProfile } from "../services/post.api";
 import { PostContext } from "../post.context";
 
 export const usePost = ()=>{
@@ -19,5 +19,7 @@ export const usePost = ()=>{
     setFeed([data.post,...feed])
     setLoading(false)
   }
+
+  
   return{loading,feed,post,handleGetFeed,handleCreatePost}
 }

@@ -20,3 +20,8 @@ export async function createPost(imageFile,caption){
   return response.data
     
 }
+
+export async function getMeProfile(){
+  const response = await api.get('/api/users/me')
+  return response.data
+}

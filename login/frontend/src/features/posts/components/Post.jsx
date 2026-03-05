@@ -6,7 +6,7 @@ const Post = ({user,post, handleLike, handleunLike}) => {
    <div className="w-full max-w-sm bg-black text-white">
 
         {/* Header */}
-        <div className="flex items-center p-4">
+        <div className="flex items-center p-1">
           <img
             src={user.profileImage}
             alt="profile"
@@ -27,13 +27,13 @@ const Post = ({user,post, handleLike, handleunLike}) => {
         {/* Action Buttons */}
         <div className="flex items-center space-x-6 px-4 py-3">
           <FaHeart onClick={()=>{post.isLiked?handleunLike(post._id):handleLike(post._id)}} className={`text-xl cursor-pointer active:scale-90 transition ${
-            post.isLiked ? "text-red-500" : "text-gray-800"}`} />
+            post.isLiked ? "text-red-500" : "text-white"}`} />
           <FaRegComment className="text-xl cursor-pointer active:scale-90 transition" />
           <FaPaperPlane className="text-xl cursor-pointer active:scale-90 transition" />
         </div>
 
         {/* Caption */}
-        <div className="px-4 pb-4">
+        <div className="px-4 pb-1">
           <p className="text-sm text-shadow-white">
             <span className="font-semibold mr-2">{user.username}</span>
             {post.caption}

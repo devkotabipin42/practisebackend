@@ -4,7 +4,7 @@ const Stories = () => {
   return (
      <div className="w-full max-w-sm mx-auto bg-black">
       
-      <div className="flex gap-4 px-4 py-3">
+      <div className="flex gap-4 px-4 py-1">
 
         {/* Your Story */}
         <div className="flex flex-col items-center">
